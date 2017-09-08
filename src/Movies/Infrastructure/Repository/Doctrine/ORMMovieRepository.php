@@ -36,6 +36,6 @@ class ORMMovieRepository extends EntityRepository
             ->where('m.id = :id')
             ->setParameter('id', $id)
             ->getQuery()
-            ->getArrayResult();
+            ->getSingleResult();
     }
 }
