@@ -26,7 +26,7 @@ $app['repository_movies'] = function ($app) {
 $app->get('/movies/list/{length}', function ($length) use ($app) {
     $movies = $app['repository_movies']->getList($length);
 
-    return $app->json([$movies]);
+    return $app->json($movies);
 })->value('length', 3);
 
 $app->get('/movies/{id}', function ($id) use ($app) {
