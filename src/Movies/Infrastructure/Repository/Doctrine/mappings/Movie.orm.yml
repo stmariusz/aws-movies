@@ -1,0 +1,22 @@
+Movies\Domain\Movie:
+  type: entity
+  repositoryClass: Movies\Infrastructure\Repository\Doctrine\ORMMovieRepository
+  table: movies
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    title:
+      type: string
+    description:
+      type: string
+    sourceUrl:
+      type: string
+    imageUrl:
+      type: string
+    price:
+      type: decimal
+      precision: 6
+      scale: 2
